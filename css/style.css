@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    background-color: #efcabb;
+}
+
+h1 {
+    font-size: 32px;
+    color: #f3E8De;
+    text-transform: uppercase;
+}
+
+.content {
+    width: 608px;
+    height: 100vh;
+    background: #4c2744;   
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    max-width: 522px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+#characterImage {
+    width: 522px;
+    height: 760px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 24px;
+    border-width: 0;
+    overflow: hidden;
+}
+
+.characterData{
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    max-height: 160px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.1em;
+}
+
+#characterName, #characterDescription {
+    margin: 20px 0 15px;
+    color: #f3E8De;
+}
+
+.btn {
+    padding: 8px;
+    margin: 8px;
+    border-radius: 16px;
+    border: 0;
+    overflow: hidden;
+
+    font-family: Karantina;
+    font-weight: Regular;
+    font-size: 112px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#smashBtn {
+    width: 275px;
+    height: 121px;
+    background: #818e6e;
+}
+
+#passBtn {
+    width: 281px;
+    height: 123px;
+    background: #c47955;
+    margin: 8px;
+}

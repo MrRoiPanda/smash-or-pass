@@ -1,17 +1,22 @@
 [
     {
-        "name": "John",
-        "description": "Un guerrier courageux qui combat pour l'honneur.",
-        "image": "img/john.png"
+        "name": "Millie",
+        "description": "Am I prettier then mommy daddy",
+        "image": "img/Millie.jpg"
     },
     {
-        "name": "Mira",
-        "description": "Une mage puissante qui maîtrise les éléments.",
-        "image": "img/mira.png"
+        "name": "Kiernan",
+        "description": "Hey check it out...a old pic of mom~",
+        "image": "img/Kiernan.jpg"
     },
     {
-        "name": "Aegon",
+        "name": "Billie",
         "description": "Un roi déchu en quête de rédemption.",
-        "image": "img/aegon.png"
+        "image": "img/Billie.jpg"
+    },
+    {
+        "name": "Sydney",
+        "description": "Waiting for me darling?",
+        "image": "img/Sydney.jpg"
     }
 ]

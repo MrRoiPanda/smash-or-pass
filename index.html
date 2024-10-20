@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smash or Pass avec Personnages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Smash or Pass</h1>
+    <p id="characterName">Cliquez pour obtenir un personnage</p>
+    <p id="characterDescription"></p>
+
+    <button id="smashBtn">Smash</button>
+    <button id="passBtn">Pass</button>
+
+    <h2>Votre choix précédent :</h2>
+    <p id="previousChoice">Aucun</p>
+
+    <script>
+        let characters = [];
+
+        // Charger les personnages depuis le fichier JSON
+        fetch('characters.json')
+            .then(response => response.json())
+            .then(data => {
+                characters = data;
+                displayRandomCharacter();
+            })
+            .catch(error => console.error('Erreur lors du chargement des personnages:', error));
+
+        // Fonction pour afficher un personnage aléatoire
+        function displayRandomCharacter() {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            const character = characters[randomIndex];
+            document.getElementById('characterName').textContent = character.name;
+            document.getElementById('characterDescription').textContent = character.description;
+        }
+
+        // Sauvegarder et afficher "Smash"
+        document.getElementById('smashBtn').addEventListener('click', () => {
+            localStorage.setItem('choice', 'Smash');
+            document.getElementById('previousChoice').textContent = 'Smash';
+            displayRandomCharacter();
+        });
+
+        // Sauvegarder et afficher "Pass"
+        document.getElementById('passBtn').addEventListener('click', () => {
+            localStorage.setItem('choice', 'Pass');
+            document.getElementById('previousChoice').textContent = 'Pass';
+            displayRandomCharacter();
+        });
+
+        // Charger le choix précédent
+        document.addEventListener('DOMContentLoaded', () => {
+            const previousChoice = localStorage.getItem('choice');
+            if (previousChoice) {
+                document.getElementById('previousChoice').textContent = previousChoice;
+            }
+        });
+    </script>
+</body>
+
+</html>

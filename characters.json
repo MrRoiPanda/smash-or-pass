@@ -1,0 +1,14 @@
+[
+    {
+        "name": "John",
+        "description": "Un guerrier courageux qui combat pour l'honneur."
+    },
+    {
+        "name": "Mira",
+        "description": "Une mage puissante qui maîtrise les éléments."
+    },
+    {
+        "name": "Aegon",
+        "description": "Un roi déchu en quête de rédemption."
+    }
+]
